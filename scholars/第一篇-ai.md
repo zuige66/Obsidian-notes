@@ -105,10 +105,14 @@
 
 ## 5. 在线 RL（第 2.2.2 节）
 - 按回合顺序模拟、边交互边更新（区别于离线 RL 一次性更新全部回合）
-- **价值方法**：
-  - TD 学习递推：$V(s_t)\leftarrow V(s_t)+\alpha[R_{t+1}+\gamma V(s')-V(s_t)]$（式 3）
-  - **SARSA**（on-policy）：用实际执行的 $(s',a')$ 更新 $Q$（式 4）
-  - **Q-learning**（off-policy）：用 $\max_{a'}Q(s',a')$ 贪心更新（式 5）
+- **价值方法**——先看懂 TD 递推这一条，其余都是它的变体：
+  - TD 学习递推（式 3）：$V(s_t)\leftarrow V(s_t)+\alpha\big[\underbrace{R_{t+1}+\gamma V(s')}_{\text{新证据}}-\underbrace{V(s_t)}_{\text{旧估计}}\big]$
+    - 方括号 = **TD 误差**：新证据（拿到的即时奖励 $R_{t+1}$ + 下一状态的价值估计 $\gamma V(s')$）与旧估计 $V(s_t)$ 的差——估计偏了就往回修
+    - $\alpha$（学习率）：每次修正多大一步；$\gamma$（折扣因子）：未来的价值打几折（贴现）
+    - 直觉：不需要等整个回合结束，每走一步就用「一步的真实奖励」校准一次估计
+  - **SARSA**（on-policy，式 4）：把 $V$ 换成 $Q$，新证据里用**实际执行的**下一个动作 $a'$：$Q(s_t,a_t)\leftarrow Q(s_t,a_t)+\alpha[R_{t+1}+\gamma Q(s',a')-Q(s_t,a_t)]$——评价的是「我正打算执行的策略」，边探索边学
+  - **Q-learning**（off-policy，式 5）：$Q(s_t,a_t)\leftarrow Q(s_t,a_t)+\alpha[R_{t+1}+\gamma\max_{a'}Q(s',a')-Q(s_t,a_t)]$
+    - 与 SARSA 唯一区别：$\max_{a'}$——假设下一步走**最优**动作，不管实际探索时走了哪步 → 直接逼近最优策略（行为策略与学习目标分离，故名 off-policy）
 - **策略方法**：
   - REINFORCE 策略梯度：$\nabla J(\theta)=\mathbb{E}[\sum_t \nabla\log\pi(a_t|s_t;\theta)\,\gamma^{t-1}R_t]$（式 6）
   - 痛点：整条轨迹采样、奖励高方差 → 训练慢；CSP 硬约束下多数采样轨迹低质甚至无意义
@@ -128,7 +132,11 @@
 ## 8. DRL（第 2.2.5 节）
 - 动机：CSP 状态-动作表示复杂，传统 RL（查表）维度灾难；DNN 做函数逼近可自动学特征，免人工特征工程
 - **价值系**：
-  - **DQN** = Q-learning + DNN，三组件：Q 网络 + **经验回放**（降方差提效率）+ **目标网络**（固定频率更新、加速收敛）；损失 $L(\omega)=\mathbb{E}[R+\gamma\max_{a'}Q(s',a';\omega^-)-Q(s,a;\omega)]^2$（式 13-14）
+  - **DQN** = Q-learning + DNN，三组件：Q 网络 + **经验回放**（降方差提效率）+ **目标网络**（固定频率更新、加速收敛）。损失函数逐项读（式 13）：
+    $$L(\omega)=\mathbb{E}\big[\underbrace{R+\gamma\max_{a'}Q(s',a';\omega^-)}_{\text{目标值（暂时冻结）}}-\underbrace{Q(s,a;\omega)}_{\text{当前网络的预测}}\big]^2$$
+    - 括号内 = TD 误差：目标值 = 即时奖励 + **目标网络**（参数 $\omega^-$，隔一段才从 $\omega$ 拷贝一次）估计的未来最优价值；预测 = 当前 Q 网络的输出
+    - 平方 + 期望 = 把「TD 误差」变成可梯度下降的回归损失——本质是让网络拟合自举目标
+    - 若目标值也用 $\omega$ 实时算，目标会跟着预测一起动（「追自己的尾巴」），训练不稳定——这就是目标网络存在的理由
   - 缺陷：取 max 导致 **Q 值过估计**、训练不稳、只能离散动作
   - **DDQN**：双网络分离「选动作」与「估 Q 值」去过估计；**D4QN**（Dueling DDQN）：把 Q 分解为状态价值 + 动作优势
 - **策略梯度系**（多用 actor-critic 框架）：
