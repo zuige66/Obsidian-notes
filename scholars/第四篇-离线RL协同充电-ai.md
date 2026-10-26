@@ -5,7 +5,8 @@
 - **作者**：Nasrin Sadeghianpourhamami, Johannes Deleu, Chris Develder（比利时根特大学 Ghent University IDLab + imec）
 - **期刊**：IEEE Transactions on Smart Grid, vol.11, no.1, pp.203–214（2020 年）
 - **DOI**：arXiv:1809.10679v2（2018-11 作者版；正式版 IEEE TSG 2020）
-- **源文件**：`D:/workplace/vehicle to grid/Definition and evaluation of model-free coordination of EV charging with reinforcement learning.pdf`（11 页）
+- **源文件**：`D:/Workplace/vehicle to grid/Definition and evaluation of model-free coordination of EV charging with reinforcement learning.pdf`（11 页）
+- **中英对照版**：`D:/Workplace/vehicle to grid/译文/第四篇-离线RL协同充电-Definition and evaluation of model-free coordination of electrical vehicle charging with reinforcement learning.pdf`（左英文/右中文，pdf2zh 机翻，术语以本文档为准）
 - **一句话结论**：提出**「分箱聚合状态」MDP**——把一组充电站的全部在充 EV 按（剩余停留时间， 剩余充电时间）分进 S×S 矩阵、按对角线（灵活度 $t_{flex}$）取聚合动作，**状态维度与站数无关**；用**离线 FQI** 在荷兰 ElaadNL 一年真实充电数据上训练：比无序充电（BAU）降本 **39%**（10 站）/ **30.4%**（50 站），距全知最优仅差 13%/15.6%，且 10 站学到的策略**免重训直接迁移到 10 倍规模**。
 
 ---

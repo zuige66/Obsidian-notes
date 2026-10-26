@@ -5,7 +5,8 @@
 - **作者**：Zhonghao Zhao, Carman K.M. Lee（通讯）, Xiaoyuan Yan, Haonan Wang（香港理工大学工业与系统工程系 + 人工智能设计实验室 LiAID）
 - **期刊**：Transportation Research Part E, Vol.190, 文章号 103698（2024 年）
 - **DOI**：10.1016/j.tre.2024.103698（2023-03-27 投稿，2024-08-06 接收，2024-08-13 上线）
-- **源文件**：`D:/workplace/vehicle to grid/Reinforcement learning for electric vehicle charging scheduling A.pdf`（26 页）
+- **源文件**：`D:/Workplace/vehicle to grid/Reinforcement learning for electric vehicle charging scheduling A.pdf`（26 页）
+- **中英对照版**：`D:/Workplace/vehicle to grid/译文/第一篇-RL充电调度综述-Reinforcement learning for electric vehicle charging scheduling - A systematic review.pdf`（左英文/右中文，26 页，pdf2zh 机翻，公式与图表排版可参考，术语以本文档为准）
 - **一句话结论**：系统梳理 2017–2023 年 **111 篇**「RL × EV 充电调度（CSP）」文献：**DQN/DDPG/SAC 三家占 68.4%**；**间接调度法（调充电价/充电功率）占 70.3%**；用户视角研究最多（52.3%）但 2022 年后电网侧反超；给出**四步算法选型流程**，并指出高样本复杂度、奖励稀疏、多约束等 **5 大挑战**与离线 DRL、POMDP、分层 RL 等 **8 个未来方向**。
 
 ---

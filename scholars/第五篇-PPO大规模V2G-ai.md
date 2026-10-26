@@ -4,7 +4,8 @@
 
 - **作者**：Yubao Zhang, Xin Chen（通讯）, Yuchen Zhang（西安交通大学电气工程学院，电力设备电气绝缘国家重点实验室）
 - **状态**：arXiv:2210.07013v1 [eess.SY]（2022-10-13）**预印本**，截至笔记日未见期刊正式版——引用需谨慎；国家自然科学基金 21773182 资助
-- **源文件**：`D:/workplace/vehicle to grid/Transfer DRL-based large-scale V2G continuous charging coordination with renewable energy.pdf`（10 页）
+- **源文件**：`D:/Workplace/vehicle to grid/Transfer DRL-based large-scale V2G continuous charging coordination with renewable energy.pdf`（10 页）
+- **中英对照版**：`D:/Workplace/vehicle to grid/译文/第五篇-PPO大规模V2G-Transfer Deep Reinforcement Learning-based Large-scale V2G Continuous Charging Coordination with Renewable Energy Sources.pdf`（左英文/右中文，pdf2zh 机翻，术语以本文档为准）
 - **一句话结论**：用 **PPO** 在电动汽车聚合商（EVA）层面做连续充放电功率决策（状态 = 过去 24h 负荷 + EVA SOC + 负荷方差；动作 = EVA 连续功率），配合**基于 SOC 缓冲因子一致性的功率分配算法**把聚合功率下放到单车；相比无序充电负荷方差降 **97.37%**、充电成本降 **76.56%**，且训练好的模型**免重训直接迁移**到含风光的微电网、10~100 倍规模 EVA（5090→50900 辆）和周调度场景。
 
 ---

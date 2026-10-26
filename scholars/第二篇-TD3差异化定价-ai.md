@@ -5,7 +5,8 @@
 - **作者**：Ahmed Abdalrahman, Weihua Zhuang（加拿大滑铁卢大学）
 - **期刊**：IEEE Transactions on Intelligent Transportation Systems (T-ITS)，2020 年
 - **DOI**：10.1109/TITS.2020.3025832（2020-03 投稿，2020-09 接收）
-- **源文件**：`D:/workplace/vehicle to grid/abdalrahman2022.pdf`（13 页）
+- **源文件**：`D:/Workplace/vehicle to grid/abdalrahman2022.pdf`（13 页）
+- **中英对照版**：`D:/Workplace/vehicle to grid/译文/第二篇-TD3差异化定价-Dynamic Pricing for Differentiated PEV Charging Services Using Deep Reinforcement Learning.pdf`（左英文/右中文，pdf2zh 机翻，Fig 2/3/4 的名称与本文补注一致，术语以本文档为准）
 - **一句话结论**：用 TD3 深度强化学习给「多服务等级」充电基础设施做差异化动态定价——不建环境模型、不要客户侧完整信息，学出来的定价策略与完全信息下的遗传算法解相似度达 0.90~0.99，且自动实现「QoS 目标越高价越高、利用率越低」的分级效果。
 
 ---

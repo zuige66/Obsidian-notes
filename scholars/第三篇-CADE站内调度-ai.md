@@ -5,7 +5,8 @@
 - **作者**：Zuzhao Ye, Yuanqi Gao, Nanpeng Yu（美国加州大学河滨分校 UC Riverside 电气与计算机工程系）
 - **期刊**：IEEE Transactions on Smart Grid, vol.13, no.4, pp.3038–3048（2022 年）
 - **DOI**：10.1109/TSG.2022.3165479（arXiv:2111.01294v2，2022-08，作者接受稿）
-- **源文件**：`D:/workplace/vehicle to grid/Learning to operate an EV charging station considering vehicle-grid integration.pdf`（12 页）
+- **源文件**：`D:/Workplace/vehicle to grid/Learning to operate an EV charging station considering vehicle-grid integration.pdf`（12 页）
+- **中英对照版**：`D:/Workplace/vehicle to grid/译文/第三篇-CADE站内调度-Learning to Operate an Electric Vehicle Charging Station Considering Vehicle-Grid Integration.pdf`（左英文/右中文，pdf2zh 机翻，术语以本文档为准）
 - **一句话结论**：**CADE 框架（集中分配 + 分散执行）**运营充电站——中央优化模块用学到的 Q 值把 EV 分配到充电桩/等待位，每个充电桩是一个独立 DQN 智能体决定充/放电功率、共享回放池和 Q 网络；利润超过 MPC 与贪心基准（仅次于全知信息的 MPC-ideal），单步计算时间随桩数**线性**增长（100 桩 1.7ms vs MPC 483~935 秒），且 Q 值可视化显示策略真的学会了「谷时充、峰时放」。
 
 ---
