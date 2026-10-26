@@ -49,7 +49,7 @@
               "type": "markdown",
               "state": {
                 "file": "scholars/第二篇-ai.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -224,19 +224,20 @@
       "bases:新建数据库": false
     }
   },
-  "active": "0397f73ba5ae50e8",
+  "active": "642d1dea635b115c",
   "lastOpenFiles": [
+    "scholars/第一篇-用于电动汽车充电调度的强化学习系统综述.md",
+    "scholars/第五篇-ai.md",
+    "scholars/第四篇-ai.md",
+    "scholars/第三篇-ai.md",
+    "scholars/第二篇-ai.md",
     "scholars/第五篇-ai.md.tmp.23812.1e4a718afcf1",
     "scholars/第五篇-ai.md.tmp.23812.9847425568c3",
     "scholars/第四篇-ai.md.tmp.23812.7ed4316a8283",
-    "scholars/第二篇-ai.md",
     "scholars/第一篇-ai.md",
-    "scholars/第五篇-ai.md",
-    "scholars/第三篇-ai.md",
     "轮椅项目/昂首EV1技术实现深度调研.pdf",
     "scholars/模板.md",
     "scholars/第二篇.md",
-    "scholars/第一篇-用于电动汽车充电调度的强化学习系统综述.md",
     "scholars",
     "新建文件夹",
     "en-learn/words.xlsx",
