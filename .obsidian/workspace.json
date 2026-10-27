@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "scholars/第四篇-离线RL协同充电-ai.md",
+                "file": "scholars/第五篇-PPO大规模V2G-ai.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "第四篇-离线RL协同充电-ai"
+              "title": "第五篇-PPO大规模V2G-ai"
             }
           }
         ]
@@ -33,12 +33,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "scholars/第四篇-离线RL协同充电-ai.md",
+                "file": "scholars/第五篇-PPO大规模V2G-ai.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "第四篇-离线RL协同充电-ai"
+              "title": "第五篇-PPO大规模V2G-ai"
             }
           }
         ]
@@ -209,12 +209,12 @@
       "bases:新建数据库": false
     }
   },
-  "active": "e10ce5467129951a",
+  "active": "642d1dea635b115c",
   "lastOpenFiles": [
-    "scholars/第三篇-CADE站内调度-ai.md",
     "scholars/第四篇-离线RL协同充电-ai.md",
-    "scholars/第三篇-ai.md",
     "scholars/第五篇-PPO大规模V2G-ai.md",
+    "scholars/第三篇-CADE站内调度-ai.md",
+    "scholars/第三篇-ai.md",
     "scholars/第二篇-TD3差异化定价-ai.md",
     "scholars/第一篇-RL充电调度综述-ai.md",
     "scholars/第二篇-ai.md",
